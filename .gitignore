@@ -5,6 +5,11 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# SSL certs/keys
+*.key
+*.crt
+*.csr
+
 # Runtime data
 pids
 *.pid
