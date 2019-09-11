@@ -3,7 +3,7 @@ Facebook Messenger chatbot using node.js + dialogflow. Learning project from ref
 
 ## setup
 
-* Configure `.env` settings (port, FB auth strings, etc.).
+* Configure `.env` settings (port, FB auth strings, etc.). You will need to set up lcoal `.key` and `.crt` self-signed certificate files.
 
 * Install `ngrok` via preferred package manager and run it with the same `{port}` number as declared in `.env`:
 
