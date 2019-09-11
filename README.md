@@ -15,9 +15,7 @@ $ ngrok http 5000
 
 * Create a [Facebook page](https://www.facebook.com/pages/create) for your bot.
 
-* Create a [Facebook app](developers.facebook.com/quickstarts) and proceed to its dashboard.
-
-* Add the `Messenger` product via the `Products ⊕` sidebar element, and configure as follows:
+* Create a [Facebook app](developers.facebook.com/quickstarts) and proceed to its dashboard. Add the `Messenger` product via the `Products ⊕` sidebar element, and configure as follows:
     + `Access Tokens:`
         - add/link the `Page` you made for the bot to generate an Access Token
         - add the generated token to your `{env.FB_TOKEN}`
