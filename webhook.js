@@ -49,7 +49,33 @@ app.post('/webhook', (req, resp) => {
             });
         });
 
-        req.status(200).end();
+        resp.status(200).end();
     }
 
 });
+
+
+
+const request = require('request');
+
+function sendMessage(event) {
+    let sender = event.sender.id;
+    let text   = event.message.text;
+
+    request({
+        url:    'https://graph.facebook.com/v4.0/me/messages',
+        qs:     {access_token: process.env.FB_TOKEN},
+        method: 'POST',
+        json: {
+            recipient: {id: sender},
+            message:   {text: text}
+        }
+    }, function (error, response) {
+        if (error) {
+            console.log('Error sending message: ', error);
+        } else if (response.body.error) {
+            console.log('Error: ', response.body.error);
+        }
+    });
+
+}
